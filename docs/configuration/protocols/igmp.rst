@@ -66,6 +66,8 @@ In the following example we can see a basic multicast setup:
    set protocols ospf area 0 network '172.16.0.0/24'
    set protocols ospf area 0 network '172.16.255.0/24'
    set protocols ospf area 0 network '172.16.1.0/24'
+   set protocols igmp interface eth0
+   set protocols igmp interface eth1
    set protocols pim interface dum0
    set protocols pim interface eth0
    set protocols pim interface eth1
@@ -79,6 +81,7 @@ In the following example we can see a basic multicast setup:
    set interfaces ethernet eth2 address '172.16.1.2/24'
    set protocols ospf area 0 network '10.0.0.0/24'
    set protocols ospf area 0 network '172.16.1.0/24'
+   set protocols igmp interface eth1
    set protocols pim interface eth1
    set protocols pim interface eth2
    set protocols pim rp address 172.16.255.1 group '224.0.0.0/4'
